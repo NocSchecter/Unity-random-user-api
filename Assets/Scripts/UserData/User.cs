@@ -10,5 +10,4 @@ public class User
     public Dob dob;
     public string phone;
     public Location location;
-    public Texture2D Texture;
 }

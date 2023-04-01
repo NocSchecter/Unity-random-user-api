@@ -1,34 +1,33 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEngine.EventSystems;
 
 public class UserDetails : MonoBehaviour
 {
-    public UserUIItem userUIItem;
+    internal List<Button> btnDetails = new List<Button>();
+    public GameObject detailsUI;
 
-    public GameObject dataUI;
-    public RawImage imageUI;
-    public TextMeshProUGUI fullInfo;
+    public RawImage picture;
+    public TextMeshProUGUI userInfo;
 
-    internal List<Button> userbuttons = new List<Button>();
-
-    private void EnableUI()
+    private void Start()
     {
-        dataUI.SetActive(true);
+        detailsUI.SetActive(false);
     }
 
-    internal void ShowUserDetails(User user)
+    public void UpdateUserInfo(List<RawImage> pic,  User user)
     {
-        EnableUI();
-        int index = userbuttons.IndexOf(EventSystem.current.currentSelectedGameObject.GetComponent<Button>());
-        imageUI.texture = userUIItem.picture[index].texture;
+         detailsUI.SetActive(true);
+        int index = btnDetails.IndexOf(EventSystem.current.currentSelectedGameObject.GetComponent<Button>());
 
-        fullInfo.text = "Name: " + user.name.first + " " + user.name.last + "\n"
-            + "Gender: " + user.gender + "\n"
-            + "Email: " + user.email + "\n"
-            + "Age: " + user.dob.age + "\n"
-            + "City: " + user.location.city + "\n";
+        picture.texture = pic[index].texture;
+
+        userInfo.text = "Name: " + user.name.first + " " + user.name.last + "\n"
+        + "Gender: " + user.gender + "\n"
+        + "Email: " + user.email + "\n"
+        + "Age: " + user.dob.age + "\n"
+        + "City: " + user.location.city + "\n";
     }
 }
