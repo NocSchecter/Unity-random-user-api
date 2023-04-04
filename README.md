@@ -1,6 +1,6 @@
-# Unity randim user API
+# Unity Random User API
 
-Este es un paquete de Unity que te permite generar usuarios aleatorios y obtener información sobre ellos utilizando la API de Random User Generator. Este paquete es muy útil si necesitas generar usuarios aleatorios para pruebas, prototipos, o cualquier otro propósito.
+Este es un proyecto en Unity que te permite generar usuarios aleatorios y obtener información sobre ellos utilizando la API de Random User Generator. Este paquete es muy útil si necesitas generar usuarios aleatorios para pruebas, prototipos, o cualquier otro propósito.
 
 ![vista de usuarios en una UI](https://github.com/NocSchecter/Unity-random-user-api/blob/develop/Screens/preview.gif)
 
